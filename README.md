@@ -1,12 +1,30 @@
-# 游戏开发指南
+# 游戏开发常用资源（施工中）
 
 > 这里更新一些我遇到的可以提高游戏开发效率的资源和经验总结，不贪多，只有最实用的。
 
 ## 游戏引擎
 * [Unity](https://unity.com/)：现阶段最主流的游戏引擎，在手游市场近乎垄断性优势。使用C#开发，有自己的可视化编程工具，并且有知名的PlayMaker插件。Unity非常适合程序员直接上手使用，入门速度很快。而且C#非常好学，功能强大。但Unity不是开源的，所以没办法直接去动底层的代码。Unity这些年奇葩的事情比较多，比如Unity中国的神经刀操作，所以劝退了一些开发者。
-* [Unreal Engine](https://www.unrealengine.com/zh-CN)：也就是虚幻引擎，现在多数公司大项目都采用了UE。使用C++开发，有一套很强大的蓝图系统。UE的优势非常多，比如很容易就能做到非常漂亮的渲染效果，比如开源。但UE也有缺陷，一是系统过于庞大，繁杂，而且底层代码有很多屎山，哪怕能改也不想改。
+* [Unreal Engine](https://www.unrealengine.com/zh-CN)：也就是虚幻引擎，现在多数公司大项目都采用了UE。使用C++开发，有一套很强大的蓝图系统。UE的优势非常多，比如很容易就能做到非常漂亮的渲染效果，比如开源，最重要的优点经常被人忽视，就是UE有一套非常强大并且有实用性的工具流，至今Unity还有明显差距。但UE也有缺陷，一是系统过于庞大，繁杂，而且底层代码有很多屎山，哪怕能改也不想改。
 * [Godot](https://godotengine.org/)：在独立游戏市场非常有影响力的开源引擎，引擎非常小巧，使用了专门的开发语言[GDScript](https://gdscript.com/)。Godot在独立游戏市场很有前景，但是因为使用人数还是相对较少，所以遇到问题可能也不容易找到文档，更难找到人帮你处理。国内有很多Godot开发者游戏开发到后期，选择了用Unity重写。
 * [RPG Maker](https://www.rpgmakerweb.com/)：一款非常古老的专门做RPG游戏的引擎，相对而言比较玩具级，适合完全没有编程基础的，但可以算是国内独立游戏的启蒙引擎，而且如果开发熟练度高的话，也能做出完成度极高的游戏。RPG Maker的版本非常多，常用版本里XP因为是还在维护的最古老的，所以美术素材和相关技术文章最多，并且XP支持三层图层；VX的整体表现非常差，作为后来者甚至缺少很多XP都有的基础功能，可以直接不考虑；VA算是在发现VX的失败后的升级版，弥补了很多缺陷，并且插件系统也比较丰富，使用的人也较多；MV支持鼠标操作，可以打包移动端，并且使用了JavaScript开发，而以前的版本都是Ruby；MZ是最新版，功能非常丰富，但是小缺陷很多。个人推荐直接在XP或者MV中选择。另外，RPG Maker的所有版本都可以在Steam上直接购买。
+* [Cocos](https://www.cocos.com/)：基本算是国产的一套游戏引擎，在手游发展初期Cocos2d-x一度拥有垄断性优势，但很快就被Unity超越了。Cocos现在最大的应用场景应该是微信小游戏，在传统游戏类型中已经毫无竞争优势了。
+  
+> **从个人经验来讲，我只推荐以上五款引擎，因为使用人数多，并且在应用范围内都是最佳选择。但后面还是提供一些其他引擎的介绍，给特殊需求的人群。**
+
+* [CryEngine](https://www.cryengine.com/)：曾经有一大批公司都在使用CryEngine，但是后来这批公司宁可去自研引擎也不再用CryEngine了。倒不是技术不行，CryEngine的技术非常强大，但太难用了，从工具流到开发逻辑都非常反人类。现在基本上算是死透了，已经没什么公司还在用了。如果有兴趣的开发者可以适当尝试，现在已经支持C#了，对于Unity的开发者来说还算是比较好上手。
+* [pygame](https://github.com/pygame/pygame)：Python的游戏开发框架。
+* [GB Studio](https://github.com/chrismaltby/gb-studio)：专门制作GB风格冒险游戏的引擎。
+
+
+> 最后，如果是单纯的喜欢研究游戏引擎，可以看[Gamefromscratch](https://www.youtube.com/c/gamefromscratch/videos)，他的视频里介绍了大量冷门的游戏引擎。
+
+## 重要工具
+### 开源工具
+* [ImGui](https://github.com/ocornut/imgui)：一个基于C++开发用户界面的解决方案，能够极大程度节省开发时间。尤其是开发引擎时，使用这个会感觉事半功倍。但也不是没有缺陷，因为文档实在太差了，所以需要自己阅读代码来领会功能。
+* [xLua](https://github.com/Tencent/xLua)：腾讯的开源项目，支持在Unity里插入Lua，并且对原有项目的侵入性极低。是非常好的手游热更新框架。
+* [xNode](https://github.com/Siccity/xNode)：Unity上的开源可视化脚本工具。
+* [UniTask](https://github.com/Cysharp/UniTask)：Unity上的一套异步操作解决方案。
+
 
 ## 学习相关
 ### 视频教程
@@ -42,8 +60,16 @@
 ## GameJam
 * [itch.io/jams](https://itch.io/jams)：itch.io的GameJam列表，基本上也是全网最全面的汇总。
 
+
+## 开源项目
+* [osu!](https://github.com/ppy/osu)：最知名的节奏游戏之一，也是最知名的开源游戏项目之一。开发语言是C#。
+* [stendhal](https://github.com/arianne/stendhal)：一款开源的MMORPG，这款游戏已经持续了十几年的时间。开发语言是Java。
+* [Wave Function Collapse](https://github.com/marian42/wavefunctioncollapse)：Unity中的一个3D波函数塌陷演示，玩家可以在一个无边界的城市里自由移动。
+* [金庸群侠传3D重制版](https://github.com/jynew/jynew)：金庸群侠传的3D重制，使用Unity开发，暂时还是比较初级阶段。
+
 ## 游戏上架
 * [Steam]()(施工中)
 * [TapTap]()(施工中)
 * [Google Play]()(施工中)
 * [App Store]()(施工中)
+
