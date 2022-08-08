@@ -4,8 +4,14 @@
 这里更新一些我遇到的可以提高游戏开发效率的资源总结，不贪多，只有最实用的。
 ***
 
+## 游戏引擎
+* [Unity](https://unity.com/)：现阶段最主流的游戏引擎，在手游市场近乎垄断性优势。使用C#开发，有自己的可视化编程工具，并且有知名的PlayMaker插件。Unity非常适合程序员直接上手使用，入门速度很快。而且C#非常好学，功能强大。但Unity不是开源的，所以没办法直接去动底层的代码。Unity这些年奇葩的事情比较多，比如Unity中国的神经刀操作，所以劝退了一些开发者。
+* [Unreal Engine](https://www.unrealengine.com/zh-CN)：也就是虚幻引擎，现在多数公司大项目都采用了UE。使用C++开发，有一套很强大的蓝图系统。UE的优势非常多，比如很容易就能做到非常漂亮的渲染效果，比如开源。但UE也有缺陷，一是系统过于庞大，繁杂，而且底层代码有很多屎山，哪怕能改也不想改。
+* [Godot](https://godotengine.org/)：在独立游戏市场非常有影响力的开源引擎，引擎非常小巧，使用了专门的开发语言[GDScript](https://gdscript.com/)。Godot在独立游戏市场非常有前景，但是因为使用人数还是相对较少，所以遇到问题可能也不容易找到文档，更难找到人帮你处理。国内有很多Godot开发者游戏开发到后期，选择了用Unity重写。
+* [RPG Maker](https://www.rpgmakerweb.com/)：一款非常古老的专门做RPG游戏的引擎，相对而言比较玩具级，适合完全没有编程基础的，但可以算是国内独立游戏的启蒙引擎，而且如果开发数量度高的话，也能做出完成度极高的游戏。RPG Maker的版本非常多，常用版本里XP因为是还在维护的最古老的，所以美术素材和相关技术文章最多，并且XP支持三层图层；VX的整体表现非常差，作为后来者甚至缺少很多XP都有的基础功能，可以直接不考虑；VA算是在发现VX的失败后的升级版，弥补了很多缺陷，并且插件系统也比较丰富，使用的人也较多；MV支持鼠标操作，可以打包移动端，并且使用了JavaScript开发，而以前的版本都是Ruby；MZ是最新版，功能非常丰富，但是小缺陷很多。个人推荐直接在XP或者MV中选择。另外，RPG Maker的所有版本都可以在Steam上直接购买。
+
 ## 学习相关
-### 视频内容
+### 视频教程
 * [Game Maker's Toolkit](https://www.youtube.com/c/MarkBrownGMT)(策划，英语)：整个Youtube上影响力最大的游戏区账号，视频都是分析游戏玩家相关的，内容质量极高，无论程序、美术还是策划都值得看。
 * [Brackeys](https://www.youtube.com/c/Brackeys/featured)(Unity，英语)：个人认为是整个Youtube，甚至是全网最好的Unity视频教程，讲解非常清晰，并且有大量实用型极强的内容。可以按照自己需求查找，然后直接使用。但是已经不再更新了。
 * [Code Monkey](https://www.youtube.com/c/CodeMonkeyUnity)(Unity，英语)：也做了大量实用性极强的视频内容，而且更新频率现在还非常高，同时和网友互动也频繁。但是他的视频有个大缺陷，大部分都要依赖他自己开发的一些库，可能出现两个问题，一是虽然你的功能实现了，但是因为依赖他的库，所以不明白原理；二是他的那些库的代码质量也不算好，不排除有隐患。
@@ -17,7 +23,20 @@
 * [UE4 Poseidon](https://www.youtube.com/c/UE4Poseidon)(UE，英语)：大量虚幻引擎的相关视频教程，其中[UE4: 3rd Person Game | Tutorial series](https://www.youtube.com/playlist?list=PLd6LaoDjaEtOtR71sPsXhH7eNwBJOwlvx)是Youtube上质量最好的第三人称射击游戏教程。
 * [Unity Game Studio Studio Shimazu](https://www.youtube.com/channel/UCDunz_CPkqkQT5ljKXcYkhg/featured)(Unity，日语)：专门制作日语的Unity教程，里面有大量实用性极强的开发技巧。并且因为过程非常细致，所以不懂日语光看代码其实也可以。
 * [Imphenzia](https://www.youtube.com/c/Imphenzia/featured)(Blender，英语)：专门制作Blender相关的内容，视频质量极高，实用性也非常强。另外他也做过一些引擎相关的视频，比如[Unity的入门教学视频](https://www.youtube.com/watch?v=pwZpJzpE2lQ&t=3s&ab_channel=Imphenzia)。
+* [AdamCYounis](https://www.youtube.com/c/AdamCYounis)(像素画，英语)：专门制作像素画相关的教程，基本上是Youtube上质量最高的，内容涵盖也是最全的。
+* [Pixel Overload](https://www.youtube.com/c/PixelOverloadChannel)(像素画，英语)：实用性很强的像素画教程。
+* [Brandon James Greer](https://www.youtube.com/channel/UCC26K7LTSrJK0BPAUyyvtQg)(像素画，英语)：质量极高的像素画教程，和前面的比他经常会有一些比较新鲜的教学内容。
 * [AI and Games](https://www.youtube.com/c/AIGamesSeries)（AI，英语）：主要是游戏内AI相关的案例分析，实用性不强，但偶尔听听会有一些特殊的点子冒出来。
 
+## 文字教程
+* [GDscript Tutorial](https://gdscript.com/tutorials/)(Godot，英语)：GDScript的官方教程，其实只要你有开发基础的话，看这个基本就够了。GDScript有点像Python，要是学过Python的话基本是可以无痛上手。
+
 ## 美术相关
-* [Game UI Database](https://www.gameuidatabase.com/) ：大量游戏UI的参考图。
+### UI
+* [Game UI Database](https://www.gameuidatabase.com/) ：大量游戏UI的参考图，并且可以按需求分类查询。
+
+### 游戏素材
+* [itch.io](https://itch.io/game-assets)：itch.io的资源站，游戏美术相关的素材非常全面，尤其是像素画相关的。
+
+## GameJam
+* [itch.io](https://itch.io/jams)：itch.io的GameJam列表，基本上也是全网最全面的汇总。
