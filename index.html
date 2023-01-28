@@ -13,17 +13,16 @@
 <body>
 
   <style type="text/css">
-
-    html{
+    html {
       line-height: 2;
     }
-
-  </style>  
+  </style>
 
   <div id="app"></div>
   <script>
     window.$docsify = {
       loadSidebar: true,
+      subMaxLevel: 3,
       name: '',
       repo: '',
       count: {
@@ -38,7 +37,22 @@
           words: "",
           minute: ""
         },
-        isExpected: true
+        isExpected: true,
+        search: {
+          maxAge: 86400000,               // 过期时间，单位毫秒，默认一天
+          paths: [],                      // or 'auto'，匹配文件路径
+          placeholder: '搜索',  // 搜索提示框文字， 支持本地化，例子在下面
+          // placeholder: {
+          //   '/zh-cn/': '搜索',
+          //   '/': 'Type to search'
+          // },
+          noData: '沒找到',          // 找不到结果文字提示，支持本地化，例子在下面
+          // noData: {
+          //   '/zh-cn/': '找不到结果',
+          //   '/': 'No Results'
+          // },
+          depth: 2,                       // 搜索标题的最大程级, 1 - 6
+        }
       },
     }
   </script>
@@ -46,6 +60,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//unpkg.com/prismjs/components/prism-csharp.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
 </body>
 
 </html>
