@@ -1,6 +1,6 @@
 # Unity开发技巧(施工中)
 
-    本文档是笔者在学 Unity，和做游戏开发时的笔记。放在一个文档里是方便检索，读者可以直接 ctrl + f 搜索关键词。
+    本文档是笔者在学 Unity 和做游戏开发时的笔记。放在一个文档里是方便检索，读者可以直接 ctrl + f 搜索关键词。或者使用左上角的搜索功能。
 
 ---
 
@@ -347,6 +347,17 @@ Debug.Log("试试这个", this.gameObject);
 
 在代码里使用 Debug.Break() 直接在所在位置暂停。
 
+### Console 里显示富文本
+
+在 Debug.log() 里是可以显示富文本的，和 HTML 的标签一样，比如：
+
+```csharp
+Debug.log("We are <b>not</b> amused.")
+Debug.log("We are <color=#ff0000ff>colorfully</color> amused")
+```
+
+全部的标签可以看这里 ： [Rich Text]([Rich Text | Unity UI | 1.0.0](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html)) 。
+
 ### 修改显示顺序
 
 开发者可以用代码修改物体的现实顺序，方法是：
@@ -429,6 +440,48 @@ public Transform target;
 
 ![Space](images/de771a4cc134172ab0c64d56bdd706e1fc17ea33fcda59c7daed40e81ed9a4fb.png)  
 
+### RequireComponent()
+
+可以使用 RequireComponent() 强制添加某个 Component ，比如：
+
+```csharp
+// PlayerScript requires the GameObject to have a Rigidbody component
+[RequireComponent(typeof(Rigidbody))]
+public class PlayerScript : MonoBehaviour
+{
+    Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
+    {
+        rb.AddForce(Vector3.up);
+    }
+}
+```
+
+另外可以使用 DisallowMultipleComponent() 来禁止添加多个同样的 Component 。
+
+### ContextMenu()
+
+ContextMenu() 可以让开发者在右键菜单里添加一个可以随时调用的功能，比如：
+
+```csharp
+public class ContextTesting : MonoBehaviour
+{
+    /// Add a context menu named "Do Something" in the inspector
+    /// of the attached script.
+    [ContextMenu("Do Something")]
+    void DoSomething()
+    {
+        Debug.Log("Perform operation");
+    }
+}
+```
+
 ### 快捷方式
 
 在 Windows 的文件管理器中创建一个快捷方式，然后拖拽到 Unity 中也可以直接使用。一些开发常用的外部文件，可以在 Unity 里直接打开，节省了切换窗口的时间。
@@ -444,6 +497,47 @@ name t:type
 ### Resources 文件夹
 
 Resources 文件夹允许你在代码中通过文件路径和名称来访问资源。放在这一文件夹的资源永远被包含进打包文件中，即使它没有被使用。在某些情况下 Resources 使用起来很方便，但是 Resources 隐患非常大。比如 Resources 会影响启动和构建的时间，比如伴随着文件增多会变得非常难以管理，比如 Resources 内的文件是无法动态更新的。
+
+### Gizmos 辅助调试
+
+Gizmos 自带了一系列调试工具，可以绘制出一些 Gizmos 来使得其一些参数方便在 Scene 窗口查看。最常用的是  OnDrawGizmos()，使用方法如下：
+
+```csharp
+void OnDrawGizmos()
+{
+     // Draw a yellow sphere at the transform's position
+     Gizmos.color = Color.yellow;
+     Gizmos.DrawSphere(transform.position, 1);
+}
+```
+
+常用的功能有：
+
+Gizmos.DrawCube() 绘制实心立方体
+
+Gizmos.DrawWireCube() 绘制空心立方体
+
+Gizmos.DrawRay() 绘制射线
+
+Gizmos.DrawLine() 绘制直线
+
+Gizmos.DrawIcon() 绘制Icon，Icon素材需要放在Gizmos文件夹中
+
+Gizmos.DrawFrustum() 绘制摄像机视椎体的视野范围
+
+常用的还有 OnDrawGizmosSelected() ，只有被选中的时候，才会显示。此外，OnSceneGUI() 也可以实现类似的效果，但是没有办法像 OnDrawGizmos() 一样全局显示。
+
+### OnValidate()
+
+OnValidate() 可以让开发者在 Inspector 里输入东西的时候做出对应的反馈。使用方法如下：
+
+```csharp
+#if UNITY_EDITOR
+void OnValidate()
+{
+}
+#endif
+```
 
 ---
 
@@ -542,6 +636,36 @@ Debug.Log(currectDateTime.ToString("yyyy年MM月dd日 HH时mm分ss秒 ddd")); //
 Debug.Log(currectDateTime.ToString("yyyyMMdd HH:mm:ss")); //20220602 11:53:02
 Debug.Log(currectDateTime.AddDays(100).ToString("yyyy-MM-dd HH:mm:ss")); //获取100天后的时间  2022-09-10 11:57:24
 ```
+
+### 根据不同平台执行不同代码
+
+常用的方法如下：
+
+```csharp
+public class PlatformDefines : MonoBehaviour {
+  void Start () {
+
+    #if UNITY_EDITOR
+      Debug.Log("Unity Editor");
+    #endif
+
+    #if UNITY_IOS
+      Debug.Log("iOS");
+    #endif
+
+    #if UNITY_STANDALONE_OSX
+        Debug.Log("Standalone OSX");
+    #endif
+
+    #if UNITY_STANDALONE_WIN
+      Debug.Log("Standalone Windows");
+    #endif
+
+  }          
+}
+```
+
+此外还可以根据编译环境自定义，比如 **ENABLE_IL2CPP** 和 **NET_4_6** ，可以在这里查找完整的支持列表：[Conditional Compilation]([Unity - Manual: Conditional Compilation](https://docs.unity3d.com/2023.1/Documentation/Manual/PlatformDependentCompilation.html)) 。
 
 ### 退出游戏
 
@@ -677,7 +801,6 @@ Unity 里设计到 2D 游戏的遮挡关系，有一个很简单的设置办法�
 ### 倒放动画
 
 把动画的 speed 调整为 -1 。
-
 
 ### Controller 'Player': Transition '' in state 'X' uses parameter 'Y' which is not compatible with condition type.
 
@@ -821,7 +944,34 @@ Tilemap Collider 2D 很容易卡住 Player 之类的其他物体，一般有两�
 
 ## ✪ 减小打包体积
 
+### 删除无用的场景
+
+所以场景都会被打包，所以确定打包的时候把不用的场景都删掉。
+
+### 找出最占体积的资源
+
+在 Console 窗口右上角，点三个点，打开 Open Editor Log，可以看到具体的打包细节。
+
+![Open Editor Log](images/3beb5eb5be2cc88096fa90ff4fd2b10c0c87d325ef8dc0ac111ad719e417302b.png)  
+
+### 调整图片和音频的压缩方法 
+
+具体格式和方法看这里： [Recommended, default, and supported texture formats, by platform](https://docs.unity3d.com/Manual/class-TextureImporterOverride.html) 。
+
+减小体积最简单的办法就是调整贴图尺寸，一张贴图从 512 和 2048 的体积差距是非常大的。
+
+### 创建 Sprite Atlas
+
+通过把一堆图片创建 Sprite Atlas 也能减小打包提及，具体参考：[Sprite Atlas](https://docs.unity3d.com/2023.1/Documentation/Manual/class-SpriteAtlas.html) 。
+
+
 ### 使用IL2CPP替代Mono
 
 修改方式在 Player Setting => Player 里。
-Mono 使用即时（JIT）编译，并在运行时按需编译代码；IL2CPP使用提前（AOT）编译并在运行之前编译整个应用程序。使用 IL2CPP 减小打包提高运行速度。
+Mono 使用即时（JIT）编译，并在运行时按需编译代码；IL2CPP 使用提前（AOT）编译并在运行之前编译整个应用程序。使用 IL2CPP 减小打包提高运行速度。
+
+### 使用 LZ4 打包压缩体积
+
+![LZ4](images/7dcb8ce7d3c0edac9a8dae57def75996c638de88327b6d0e05a7815c1f8ca781.png)  
+
+
