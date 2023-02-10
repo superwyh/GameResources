@@ -1,6 +1,10 @@
-# Unity开发技巧(施工中)
+# Unity 开发技巧(施工中)
 
-    本文档是笔者在学 Unity 和做游戏开发时的笔记。放在一个文档里是方便检索，读者可以直接 ctrl + f 搜索关键词。或者使用左上角的搜索功能。
+> 本文档是笔者在学 Unity 和做游戏开发时的笔记。放在一个文档里是方便检索，读者可以直接 ctrl + f 搜索关键词。或者使用左上角的搜索功能。
+
+作者的书：[《中国游戏风云》](https://book.douban.com/subject/36077734/) | [《游戏化思维》](https://book.douban.com/subject/36210962/) | [《游戏机图鉴》](https://book.douban.com/subject/35894947/)
+
+本文档的 Github 地址：https://github.com/superwyh/GameResources
 
 ---
 
