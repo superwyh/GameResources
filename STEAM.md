@@ -223,6 +223,11 @@ if (SteamAPI.RestartAppIfNecessary(AppId_t.Invalid)) {
 
 如果有不懂的可以看官方提供的案例：https://github.com/rlabrecque/Steamworks.NET-Example#steamworksnet-example
 
+
+## 定价
+
+在首页最上面【商店程序包、定价与发行日期】的部分可以设置定价，定价设置方式是开发者选定一个美元价格，之后自动生成其他货币的定价。之后玩家可以根据需要调整每种货币的价格。但是不能差距太大，因为之后会有 Steam 对价格的审核，有可能会不通过。
+
 ## 提交包
 
 提交包的地方在首页的【编辑 Steamworks 设置】里。
