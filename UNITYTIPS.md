@@ -469,6 +469,15 @@ public class PlayerScript : MonoBehaviour
 
 另外可以使用 DisallowMultipleComponent() 来禁止添加多个同样的 Component 。
 
+### 修改 Unity 默认生成的代码
+
+当你在 Unity 里创建 CS 文件的时候，默认会给你生成 Start() 和 Update()，但大部分情况下我们都不需要这个。如果要修改可以进入 Unity 编辑器的 **安装文件夹** （注意是 Unity 的安装文件夹，而不是你的项目文件夹）。在 editor/Data/Resources/ScriptTemplates 里可以找到 Unity 默认的所有模板代码。 
+
+如果不想修改原始的模板，那可以直接复制一份，把前面的数字改小，Unity 会有点读取数字更小的模板。
+
+注意：必须重启编辑器以后才会生效。
+
+
 ### ContextMenu()
 
 ContextMenu() 可以让开发者在右键菜单里添加一个可以随时调用的功能，比如：
