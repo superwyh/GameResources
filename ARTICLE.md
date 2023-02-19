@@ -20,82 +20,106 @@
 | [分析Lua的运算栈区](https://zhuanlan.zhihu.com/p/495940371)                                         |
 | [基于Unity.InputSystem和下推状态机的输入系统解决方案](https://zhuanlan.zhihu.com/p/527283873)                 |
 | [Unity线性菜单设计](https://zhuanlan.zhihu.com/p/578852056)                                        |
-|                                                                                              |
+| [游戏物理引擎(一) 刚体动力学](https://zhuanlan.zhihu.com/p/109532468)                                    |
+| [游戏物理引擎(二) 碰撞检测之Broad-Phase](https://zhuanlan.zhihu.com/p/113415779)                         |
+| [游戏物理引擎(三) 碰撞检测之Narrow-Phase](https://zhuanlan.zhihu.com/p/127844705)                        |
+| [游戏物理引擎(四) 约束](https://zhuanlan.zhihu.com/p/143003234)                                       |
+| [Lua和C的互交互](https://zhuanlan.zhihu.com/p/133285913)                                          |
+| [看我是如何用C#编写一个小于8KB的贪吃蛇游戏的](https://zhuanlan.zhihu.com/p/598595150)                           |
+| [大世界技术之地形几何篇](https://zhuanlan.zhihu.com/p/523750469)                                        |
+| [详尽的快速傅里叶变换推导与Unity中的实现](https://zhuanlan.zhihu.com/p/208511211)                             |
+| [Unity实现无缝大世界--地形](https://zhuanlan.zhihu.com/p/426910128)                                   |
+| [虚幻引擎编译系统总结](https://zhuanlan.zhihu.com/p/458435453)                                         |
 
-| 图形和渲染                                                                                   |
-| --------------------------------------------------------------------------------------- |
-| [游戏中远景阴影方案预研笔记](https://zhuanlan.zhihu.com/p/600717039)                                 |
-| [深入理解 PBR/基于图像照明 (IBL)](https://zhuanlan.zhihu.com/p/66518450)                          |
-| [DX12渲染管线(1) - 基于物理的渲染(PBR)](https://zhuanlan.zhihu.com/p/61962884)                     |
-| [DX12渲染管线(2) - 时间性抗锯齿(TAA)](https://zhuanlan.zhihu.com/p/64993622)                      |
-| [DX12渲染管线(3) - 分块/分簇延迟渲染](https://zhuanlan.zhihu.com/p/66884611)                        |
-| [DX12渲染管线(4) - 遮罩加速的软光栅遮挡剔除](https://zhuanlan.zhihu.com/p/69287128)                     |
-| [DX12渲染管线(5) - 距离场 : 建场](https://zhuanlan.zhihu.com/p/89701518)                         |
-| [DX12渲染管线(6) - 级联阴影与距离场阴影](https://zhuanlan.zhihu.com/p/92017307)                       |
-| [DX12渲染管线(7) - 后处理和屏幕空间特效](https://zhuanlan.zhihu.com/p/99880471)                       |
-| [计算机图形学一：基础变换矩阵总结(缩放，旋转，位移)](https://zhuanlan.zhihu.com/p/144323332)                    |
-| [计算机图形学二：视图变换(坐标系转化，正交投影，透视投影，视口变换)](https://zhuanlan.zhihu.com/p/144329075)            |
-| [计算机图形学三：直线光栅化的数值微分算法,中点Brensenham算法和三角形的光栅化](https://zhuanlan.zhihu.com/p/144330664)   |
-| [计算机图形学四：抗锯齿SSAA及MSAA算法和遮挡剔除Z-Buffer算法](https://zhuanlan.zhihu.com/p/144331249)         |
-| [计算机图形学五：局部光照模型(Blinn-Phong 反射模型)与着色方法](https://zhuanlan.zhihu.com/p/144331612)         |
-| [计算机图形学六：透视矫正插值和图形渲染管线总结](https://zhuanlan.zhihu.com/p/144331875)                       |
-| [计算机图形学七：纹理映射(Texture Mapping)及Mipmap技术](https://zhuanlan.zhihu.com/p/144332091)        |
-| [计算机图形学八：纹理映射的应用(法线贴图，凹凸贴图与阴影贴图等相关应用的原理详解)](https://zhuanlan.zhihu.com/p/144357517)     |
-| [计算机图形学补充1：重心坐标(barycentric coordinates)详解及其作用](https://zhuanlan.zhihu.com/p/144360079) |
-| [计算机图形学九：隐式曲面(代数形式,CSG, 距离函数,分型几何)与显式曲面](https://zhuanlan.zhihu.com/p/144392820)        |
-| [计算机图形学十：贝塞尔曲线与贝塞尔曲面](https://zhuanlan.zhihu.com/p/144399638)                           |
-| [计算机图形学十一：曲面细分(subdivision)与曲面简化(Smplication) ](https://zhuanlan.zhihu.com/p/144400261) |
-| [计算机图形学十二：Whitted-Style光线追踪原理详解及实现细节](https://zhuanlan.zhihu.com/p/144403005)           |
-| [计算机图形学十三：利用包围盒技术加速光线追踪（KD-Tree and BVH）](https://zhuanlan.zhihu.com/p/144403802)       |
-| [计算机图形学十四：基于物理渲染的基础知识(辐射度量学，BRDF和渲染方程)](https://zhuanlan.zhihu.com/p/145410416)         |
-| [计算机图形学十五：全局光照(蒙特卡洛路径追踪)](https://zhuanlan.zhihu.com/p/146714484)                       |
-| [计算机图形学十六：照相机与透镜(光圈,快门和景深)](https://zhuanlan.zhihu.com/p/147862678)                     |
-| [基于物理的渲染：微平面理论(Cook-Torrance BRDF推导)](https://zhuanlan.zhihu.com/p/152226698)           |
-| [计算机图形学补充2：齐次空间裁剪(Homogeneous Space Clipping)](https://zhuanlan.zhihu.com/p/162190576)  |
-| [基于物理的渲染：基于图像照明(Image-based Lighting)](https://zhuanlan.zhihu.com/p/261005894)          |
-| [重要性采样和多重重要性采样在路径追踪中的应用](https://zhuanlan.zhihu.com/p/360420413)                        |
-| [UnityShader入门精要笔记1：渲染流水线](https://zhuanlan.zhihu.com/p/108387207)                      |
-| [UnityShader入门精要笔记2：Shaderlab语法](https://zhuanlan.zhihu.com/p/108406022)                |
-| [UnityShader入门精要3：空间变换](https://zhuanlan.zhihu.com/p/110009504)                         |
-| [UnityShader入门精要笔记4：Shader基础](https://zhuanlan.zhihu.com/p/110121267)                   |
-| [UnityShader入门精要笔记5：基础光照模型A](https://zhuanlan.zhihu.com/p/110326132)                    |
-| [UnityShader入门精要笔记6：基础光照模型B](https://zhuanlan.zhihu.com/p/110395416)                    |
-| [UnityShader入门精要笔记7：基础纹理A](https://zhuanlan.zhihu.com/p/111398690)                      |
-| [UnityShader入门精要笔记8：基础纹理B](https://zhuanlan.zhihu.com/p/111580224)                      |
-| [UnityShader入门精要笔记9：基础纹理C](https://zhuanlan.zhihu.com/p/112253165)                      |
-| [UnityShader入门精要笔记10：透明效果](https://zhuanlan.zhihu.com/p/112567640)                      |
-| [UnityShader入门精要笔记11：高级光照A](https://zhuanlan.zhihu.com/p/110579478)                     |
-| [UnityShader入门精要笔记12：高级光照B](https://zhuanlan.zhihu.com/p/113087810)                     |
-| [UnityShader入门精要笔记13：高级光照C](https://zhuanlan.zhihu.com/p/113552884)                     |
-| [UnityShader入门精要笔记14：高级纹理A](https://zhuanlan.zhihu.com/p/114201162)                     |
-| [UnityShader入门精要笔记15：高级纹理B](https://zhuanlan.zhihu.com/p/114623697)                     |
-| [UnityShader入门精要16：着色器动画1](https://zhuanlan.zhihu.com/p/115222205)                      |
-| [UnityShader入门精要17：着色器动画2](https://zhuanlan.zhihu.com/p/116733659)                      |
-| [UnityShader入门精要笔记18：非真实感渲染](https://zhuanlan.zhihu.com/p/120199237)                    |
-| [UnityShader入门精要笔记19：噪声纹理](https://zhuanlan.zhihu.com/p/121584041)                      |
-| [UnityShader入门精要笔记20：渲染优化技术](https://zhuanlan.zhihu.com/p/122318496)                    |
-| [UnityShader入门精要笔记21：表面着色器](https://zhuanlan.zhihu.com/p/124235713)                     |
-| [UnityShader入门精要-URP管线1. 关于URP](https://zhuanlan.zhihu.com/p/228582171)                 |
-| [UnityShader入门精要-URP管线2. 基础光照](https://zhuanlan.zhihu.com/p/232193169)                  |
-| [UnityShader入门精要-URP管线3. Blinn-Phong高光模型](https://zhuanlan.zhihu.com/p/245906244)       |
-| [UnityShader入门精要-URP管线4. 纹理贴图和法线纹理](https://zhuanlan.zhihu.com/p/250866353)             |
-| [UnityShader入门精要-URP管线5. 透明度混合与透明度测试](https://zhuanlan.zhihu.com/p/256357340)           |
-| [游戏开发技术杂谈1：基础法线贴图生成算法](https://zhuanlan.zhihu.com/p/111419293)                          |
-| [游戏开发技术杂谈2：理解插值函数lerp](https://zhuanlan.zhihu.com/p/114898567)                          |
-| [游戏开发技术杂谈3：OpenGL投影矩阵](https://zhuanlan.zhihu.com/p/115028420)                          |
-| [游戏开发技术杂谈4：柏林噪声1](https://zhuanlan.zhihu.com/p/354931692)                               |
-| [游戏开发技术杂谈5：柏林噪声2](https://zhuanlan.zhihu.com/p/360235233)                               |
-| [游戏开发技术杂谈6：柏林噪声3](https://zhuanlan.zhihu.com/p/360887339)                               |
-| [游戏开发技术杂谈7：Unity后期处理特效·颜色查找表的运用](https://zhuanlan.zhihu.com/p/373819558)                |
-| [游戏开发技术杂谈8：JPS寻路算法](https://zhuanlan.zhihu.com/p/500807732)                             |
-| [游戏开发技术杂谈9：简易2d水面模拟](https://zhuanlan.zhihu.com/p/511009490)                            |
-| [游戏开发技术杂谈10：绳索模拟](https://zhuanlan.zhihu.com/p/511401119)                               |
-| [游戏开发技术杂谈11: Worley噪声](https://zhuanlan.zhihu.com/p/514422184)                          |
-| [ShaderGraph学习笔记1 安装&打开SG](https://zhuanlan.zhihu.com/p/210934775)                      |
-| [ShaderGraph学习笔记2 着色器特有的函数式编程](https://zhuanlan.zhihu.com/p/212663934)                  |
-| [ShaderGraph学习笔记3 实现2D透射水体](https://zhuanlan.zhihu.com/p/405232921)                     |
-| [ShaderGraph学习笔记4 实现老式CRT屏幕效果](https://zhuanlan.zhihu.com/p/436954775)                  |
-| [URP扩展PostProcessing](https://zhuanlan.zhihu.com/p/531548498)                           |
+| 图形和渲染                                                                                       |
+| ------------------------------------------------------------------------------------------- |
+| [游戏中远景阴影方案预研笔记](https://zhuanlan.zhihu.com/p/600717039)                                     |
+| [深入理解 PBR/基于图像照明 (IBL)](https://zhuanlan.zhihu.com/p/66518450)                              |
+| [DX12渲染管线(1) - 基于物理的渲染(PBR)](https://zhuanlan.zhihu.com/p/61962884)                         |
+| [DX12渲染管线(2) - 时间性抗锯齿(TAA)](https://zhuanlan.zhihu.com/p/64993622)                          |
+| [DX12渲染管线(3) - 分块/分簇延迟渲染](https://zhuanlan.zhihu.com/p/66884611)                            |
+| [DX12渲染管线(4) - 遮罩加速的软光栅遮挡剔除](https://zhuanlan.zhihu.com/p/69287128)                         |
+| [DX12渲染管线(5) - 距离场 : 建场](https://zhuanlan.zhihu.com/p/89701518)                             |
+| [DX12渲染管线(6) - 级联阴影与距离场阴影](https://zhuanlan.zhihu.com/p/92017307)                           |
+| [DX12渲染管线(7) - 后处理和屏幕空间特效](https://zhuanlan.zhihu.com/p/99880471)                           |
+| [计算机图形学一：基础变换矩阵总结(缩放，旋转，位移)](https://zhuanlan.zhihu.com/p/144323332)                        |
+| [计算机图形学二：视图变换(坐标系转化，正交投影，透视投影，视口变换)](https://zhuanlan.zhihu.com/p/144329075)                |
+| [计算机图形学三：直线光栅化的数值微分算法,中点Brensenham算法和三角形的光栅化](https://zhuanlan.zhihu.com/p/144330664)       |
+| [计算机图形学四：抗锯齿SSAA及MSAA算法和遮挡剔除Z-Buffer算法](https://zhuanlan.zhihu.com/p/144331249)             |
+| [计算机图形学五：局部光照模型(Blinn-Phong 反射模型)与着色方法](https://zhuanlan.zhihu.com/p/144331612)             |
+| [计算机图形学六：透视矫正插值和图形渲染管线总结](https://zhuanlan.zhihu.com/p/144331875)                           |
+| [计算机图形学七：纹理映射(Texture Mapping)及Mipmap技术](https://zhuanlan.zhihu.com/p/144332091)            |
+| [计算机图形学八：纹理映射的应用(法线贴图，凹凸贴图与阴影贴图等相关应用的原理详解)](https://zhuanlan.zhihu.com/p/144357517)         |
+| [计算机图形学补充1：重心坐标(barycentric coordinates)详解及其作用](https://zhuanlan.zhihu.com/p/144360079)     |
+| [计算机图形学九：隐式曲面(代数形式,CSG, 距离函数,分型几何)与显式曲面](https://zhuanlan.zhihu.com/p/144392820)            |
+| [计算机图形学十：贝塞尔曲线与贝塞尔曲面](https://zhuanlan.zhihu.com/p/144399638)                               |
+| [计算机图形学十一：曲面细分(subdivision)与曲面简化(Smplication) ](https://zhuanlan.zhihu.com/p/144400261)     |
+| [计算机图形学十二：Whitted-Style光线追踪原理详解及实现细节](https://zhuanlan.zhihu.com/p/144403005)               |
+| [计算机图形学十三：利用包围盒技术加速光线追踪（KD-Tree and BVH）](https://zhuanlan.zhihu.com/p/144403802)           |
+| [计算机图形学十四：基于物理渲染的基础知识(辐射度量学，BRDF和渲染方程)](https://zhuanlan.zhihu.com/p/145410416)             |
+| [计算机图形学十五：全局光照(蒙特卡洛路径追踪)](https://zhuanlan.zhihu.com/p/146714484)                           |
+| [计算机图形学十六：照相机与透镜(光圈,快门和景深)](https://zhuanlan.zhihu.com/p/147862678)                         |
+| [基于物理的渲染：微平面理论(Cook-Torrance BRDF推导)](https://zhuanlan.zhihu.com/p/152226698)               |
+| [计算机图形学补充2：齐次空间裁剪(Homogeneous Space Clipping)](https://zhuanlan.zhihu.com/p/162190576)      |
+| [基于物理的渲染：基于图像照明(Image-based Lighting)](https://zhuanlan.zhihu.com/p/261005894)              |
+| [重要性采样和多重重要性采样在路径追踪中的应用](https://zhuanlan.zhihu.com/p/360420413)                            |
+| [UnityShader入门精要笔记1：渲染流水线](https://zhuanlan.zhihu.com/p/108387207)                          |
+| [UnityShader入门精要笔记2：Shaderlab语法](https://zhuanlan.zhihu.com/p/108406022)                    |
+| [UnityShader入门精要3：空间变换](https://zhuanlan.zhihu.com/p/110009504)                             |
+| [UnityShader入门精要笔记4：Shader基础](https://zhuanlan.zhihu.com/p/110121267)                       |
+| [UnityShader入门精要笔记5：基础光照模型A](https://zhuanlan.zhihu.com/p/110326132)                        |
+| [UnityShader入门精要笔记6：基础光照模型B](https://zhuanlan.zhihu.com/p/110395416)                        |
+| [UnityShader入门精要笔记7：基础纹理A](https://zhuanlan.zhihu.com/p/111398690)                          |
+| [UnityShader入门精要笔记8：基础纹理B](https://zhuanlan.zhihu.com/p/111580224)                          |
+| [UnityShader入门精要笔记9：基础纹理C](https://zhuanlan.zhihu.com/p/112253165)                          |
+| [UnityShader入门精要笔记10：透明效果](https://zhuanlan.zhihu.com/p/112567640)                          |
+| [UnityShader入门精要笔记11：高级光照A](https://zhuanlan.zhihu.com/p/110579478)                         |
+| [UnityShader入门精要笔记12：高级光照B](https://zhuanlan.zhihu.com/p/113087810)                         |
+| [UnityShader入门精要笔记13：高级光照C](https://zhuanlan.zhihu.com/p/113552884)                         |
+| [UnityShader入门精要笔记14：高级纹理A](https://zhuanlan.zhihu.com/p/114201162)                         |
+| [UnityShader入门精要笔记15：高级纹理B](https://zhuanlan.zhihu.com/p/114623697)                         |
+| [UnityShader入门精要16：着色器动画1](https://zhuanlan.zhihu.com/p/115222205)                          |
+| [UnityShader入门精要17：着色器动画2](https://zhuanlan.zhihu.com/p/116733659)                          |
+| [UnityShader入门精要笔记18：非真实感渲染](https://zhuanlan.zhihu.com/p/120199237)                        |
+| [UnityShader入门精要笔记19：噪声纹理](https://zhuanlan.zhihu.com/p/121584041)                          |
+| [UnityShader入门精要笔记20：渲染优化技术](https://zhuanlan.zhihu.com/p/122318496)                        |
+| [UnityShader入门精要笔记21：表面着色器](https://zhuanlan.zhihu.com/p/124235713)                         |
+| [UnityShader入门精要-URP管线1. 关于URP](https://zhuanlan.zhihu.com/p/228582171)                     |
+| [UnityShader入门精要-URP管线2. 基础光照](https://zhuanlan.zhihu.com/p/232193169)                      |
+| [UnityShader入门精要-URP管线3. Blinn-Phong高光模型](https://zhuanlan.zhihu.com/p/245906244)           |
+| [UnityShader入门精要-URP管线4. 纹理贴图和法线纹理](https://zhuanlan.zhihu.com/p/250866353)                 |
+| [UnityShader入门精要-URP管线5. 透明度混合与透明度测试](https://zhuanlan.zhihu.com/p/256357340)               |
+| [游戏开发技术杂谈1：基础法线贴图生成算法](https://zhuanlan.zhihu.com/p/111419293)                              |
+| [游戏开发技术杂谈2：理解插值函数lerp](https://zhuanlan.zhihu.com/p/114898567)                              |
+| [游戏开发技术杂谈3：OpenGL投影矩阵](https://zhuanlan.zhihu.com/p/115028420)                              |
+| [游戏开发技术杂谈4：柏林噪声1](https://zhuanlan.zhihu.com/p/354931692)                                   |
+| [游戏开发技术杂谈5：柏林噪声2](https://zhuanlan.zhihu.com/p/360235233)                                   |
+| [游戏开发技术杂谈6：柏林噪声3](https://zhuanlan.zhihu.com/p/360887339)                                   |
+| [游戏开发技术杂谈7：Unity后期处理特效·颜色查找表的运用](https://zhuanlan.zhihu.com/p/373819558)                    |
+| [游戏开发技术杂谈8：JPS寻路算法](https://zhuanlan.zhihu.com/p/500807732)                                 |
+| [游戏开发技术杂谈9：简易2d水面模拟](https://zhuanlan.zhihu.com/p/511009490)                                |
+| [游戏开发技术杂谈10：绳索模拟](https://zhuanlan.zhihu.com/p/511401119)                                   |
+| [游戏开发技术杂谈11: Worley噪声](https://zhuanlan.zhihu.com/p/514422184)                              |
+| [ShaderGraph学习笔记1 安装&打开SG](https://zhuanlan.zhihu.com/p/210934775)                          |
+| [ShaderGraph学习笔记2 着色器特有的函数式编程](https://zhuanlan.zhihu.com/p/212663934)                      |
+| [ShaderGraph学习笔记3 实现2D透射水体](https://zhuanlan.zhihu.com/p/405232921)                         |
+| [ShaderGraph学习笔记4 实现老式CRT屏幕效果](https://zhuanlan.zhihu.com/p/436954775)                      |
+| [URP扩展PostProcessing](https://zhuanlan.zhihu.com/p/531548498)                               |
+| [移动端基于SDF的体积云：被云淹没，不知所措](https://zhuanlan.zhihu.com/p/350058989)                            |
+| [游戏中的Outline Rendering(描边)](https://zhuanlan.zhihu.com/p/138980828)                         |
+| [游戏中的全局光照(一) 球谐函数和环境光漫反射](https://zhuanlan.zhihu.com/p/144910975)                           |
+| [游戏中的全局光照(二) IBL环境光高光](https://zhuanlan.zhihu.com/p/162793239)                              |
+| [游戏中的全局光照(三) 环境光遮蔽/AO](https://zhuanlan.zhihu.com/p/194198670)                              |
+| [游戏中的全局光照(四) Lightmap、LightProbe和Irradiance Volume](https://zhuanlan.zhihu.com/p/265463655) |
+| [游戏中的全局光照(五) Reflection Probe、SSR和PPR](https://zhuanlan.zhihu.com/p/313845354)              |
+| [Unity日夜循环天空球(Procedural Skybox)](https://zhuanlan.zhihu.com/p/197107007)                   |
+| [浅谈Unity纹理串流系统Mipmap Streaming System](https://zhuanlan.zhihu.com/p/600257663)              |
+| [动态漫反射全局光照（Dynamic Diffuse Global Illumination）](https://zhuanlan.zhihu.com/p/404520592)    |
+| [实时PRTGI技术与实现](https://zhuanlan.zhihu.com/p/541137978)                                      |
+| [MatCap原理介绍及应用](https://zhuanlan.zhihu.com/p/420473327)                                     |
+| [一些较少人提过的二次元渲染方法](https://zhuanlan.zhihu.com/p/539950545)                                   |
+| [Shader中的 if 和分支](https://zhuanlan.zhihu.com/p/122467342)                                   |
+| [网格简化与LOD(Level of Detail)](https://zhuanlan.zhihu.com/p/32700416)                          |
 
 ## 美术相关
 
