@@ -193,6 +193,12 @@ if (Input.anyKeyDown)
     }
 ```
 
+### 把一个 string 转为 KeyCode
+
+```csharp
+ KeyCode code = (KeyCode) System.Enum.Parse(typeof(KeyCode), "KeyCode", true) ;
+```
+
 ### 获取双击
 
 ```csharp
@@ -818,6 +824,70 @@ Unity 里设计到 2D 游戏的遮挡关系，有一个很简单的设置办法�
 ### Controller 'Player': Transition '' in state 'X' uses parameter 'Y' which is not compatible with condition type.
 
 在做关键帧动画的时候偶尔会出现的一个 Bug，重新连一遍 Animator 里的线就可以解决。
+
+
+### 颜色格式转换
+
+因为 Unity 使用的不是 RGB 的格式，所以在程序里经常需要转换。
+
+
+```csharp
+using UnityEngine;
+ 
+/// <summary>
+/// 颜色工具类
+/// </summary>
+public static class ColorUtils
+{
+    /// <summary>
+    /// Color转Hex
+    /// </summary>
+    /// alpha:是否有透明度
+    public static string Color2Hex(Color color, bool alpha = true)
+    {
+        string hex;
+        if (alpha)
+        {
+            hex = ColorUtility.ToHtmlStringRGBA(color);
+        }
+        else
+        {
+            hex = ColorUtility.ToHtmlStringRGB(color);
+        }
+        return hex;
+    }
+ 
+    /// <summary>
+    /// Hex转Color
+    /// </summary>
+    /// Hex：#000000
+    public static Color HexRGB2Color(string hexRGB)
+    {
+        Color color;
+        ColorUtility.TryParseHtmlString(hexRGB, out color);
+        return color;
+    }
+ 
+    /// <summary>
+    /// Color转HSV
+    /// </summary>
+    public static void Color2HSV(Color color, out float h, out float s, out float v)
+    {
+        Color.RGBToHSV(color, out h, out s, out v);
+    }
+ 
+    /// <summary>
+    /// HSV转Color
+    /// </summary>
+    public static Color HSV2Color(float h, float s, float v)
+    {
+        Color color = Color.HSVToRGB(h, s, v);
+        return color;
+    }
+}
+
+```
+
 
 ---
 
