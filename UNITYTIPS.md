@@ -1,4 +1,4 @@
-# Unity 开发技巧(施工中)
+# Unity 开发技巧
 
 > 本文档是笔者在学 Unity 和做游戏开发时的笔记。放在一个文档里是方便检索，读者可以直接 ctrl + f 搜索关键词。或者使用左上角的搜索功能。
 
@@ -908,6 +908,36 @@ Compression Format 有三种，分别为：
 * PCM：适合短音效。
 * ADPCM：适合频繁使用的音效。
 * Vorbis：适合长音效，尤其是背景音。
+
+
+## 获取音频长度
+
+在 Unity 中，当切换到其他程序时，即使游戏没有明显暂停（例如 Time.timeScale 不变），AudioSource 的 isPlaying 属性可能仍然会变为 false，因为许多平台会自动暂停游戏音频。这是平台级别的行为，通常不受 Unity 控制。解决方案是手动跟踪音频的播放时间，而不是依赖于 isPlaying 属性。可以通过记录音频开始播放的时间，然后在协程中检查经过的时间是否超过了音频的总持续时间。
+
+代码如下：
+
+```csharp
+IEnumerator WaitForAudio(AudioSource audioSource, Action onFinished)
+{
+    // 等待音频开始播放
+    yield return new WaitUntil(() => audioSource.isPlaying);
+
+    // 记录开始播放的时间
+    float startTime = Time.time;
+
+    // 循环检查音频是否播放完成
+    while (Time.time - startTime < audioSource.clip.length)
+    {
+        yield return null; // 等待下一帧
+    }
+
+    // 延迟 0.5 秒
+    yield return new WaitForSeconds(0.5f);
+
+    // 调用完成后的操作
+    onFinished?.Invoke();
+}
+```
 
 ---
 
