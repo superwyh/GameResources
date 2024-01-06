@@ -2,7 +2,7 @@
 
 > 这里更新一些我遇到的可以提高游戏开发效率的资源和经验总结，不贪多，只有最实用的。
 
-作者的书：[《中国游戏风云》](https://book.douban.com/subject/36077734/) | [游戏为什么好玩](https://book.douban.com/subject/36347706/) | [《游戏化思维》](https://book.douban.com/subject/36210962/) | [电子游戏商业史](https://book.douban.com/subject/36394867/) | [《游戏机图鉴》](https://book.douban.com/subject/35894947/)
+作者的书：[《中国游戏风云》](https://book.douban.com/subject/36077734/) | [《游戏为什么好玩》](https://book.douban.com/subject/36347706/) | [《游戏化思维》](https://book.douban.com/subject/36210962/) | [《电子游戏商业史》](https://book.douban.com/subject/36394867/) | [《游戏机图鉴》](https://book.douban.com/subject/35894947/)
 
 本文档的 Github 地址：https://github.com/superwyh/GameResources
 

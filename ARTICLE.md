@@ -1,4 +1,6 @@
-# 游戏开发文章列表（施工中）
+# 游戏开发文章列表
+
+作者的书：[《中国游戏风云》](https://book.douban.com/subject/36077734/) | [《游戏为什么好玩》](https://book.douban.com/subject/36347706/) | [《游戏化思维》](https://book.douban.com/subject/36210962/) | [《电子游戏商业史》](https://book.douban.com/subject/36394867/) | [《游戏机图鉴》](https://book.douban.com/subject/35894947/)
 
 ## 技术相关
 

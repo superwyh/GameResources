@@ -1,6 +1,6 @@
 # Steam 上架流程（Unity 版）
 
-作者的书：[《中国游戏风云》](https://book.douban.com/subject/36077734/) | [《游戏化思维》](https://book.douban.com/subject/36210962/) | [《游戏机图鉴》](https://book.douban.com/subject/35894947/)
+作者的书：[《中国游戏风云》](https://book.douban.com/subject/36077734/) | [《游戏为什么好玩》](https://book.douban.com/subject/36347706/) | [《游戏化思维》](https://book.douban.com/subject/36210962/) | [《电子游戏商业史》](https://book.douban.com/subject/36394867/) | [《游戏机图鉴》](https://book.douban.com/subject/35894947/)
 
 本文档的 Github 地址：https://github.com/superwyh/GameResources
 
