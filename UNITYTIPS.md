@@ -558,6 +558,48 @@ void OnValidate()
 #endif
 ```
 
+
+### 批量修改 GameObjects 的坐标
+
+有的时候虽然子 GameObject 的相对坐标没变，但是父 GameObject 的坐标了，导致子 GameObject 的坐标也变了，可以通过下面代码批量修改：
+
+```csharp
+using UnityEngine;
+
+[ExecuteInEditMode]
+public class AdjustParentAndChildrenPositionsEditor : MonoBehaviour
+{
+    void Update()
+    {
+        if (!Application.isPlaying)
+        {
+            AdjustPositions();
+        }
+    }
+
+    void AdjustPositions()
+    {
+        Vector3 parentPosition = transform.position;
+        Vector3 newParentPosition = new Vector3(0, 0, parentPosition.z);
+        Vector3 offset = parentPosition - newParentPosition;
+
+        AdjustChildren(transform, offset);
+
+        transform.position = newParentPosition;
+    }
+
+    void AdjustChildren(Transform parent, Vector3 offset)
+    {
+        foreach (Transform child in parent)
+        {
+            child.position += offset;
+            AdjustChildren(child, offset);
+        }
+    }
+}
+
+```
+
 ---
 
 ## ✪ 硬件和系统
@@ -910,7 +952,7 @@ Compression Format 有三种，分别为：
 * Vorbis：适合长音效，尤其是背景音。
 
 
-## 获取音频长度
+### 获取音频长度
 
 在 Unity 中，当切换到其他程序时，即使游戏没有明显暂停（例如 Time.timeScale 不变），AudioSource 的 isPlaying 属性可能仍然会变为 false，因为许多平台会自动暂停游戏音频。这是平台级别的行为，通常不受 Unity 控制。解决方案是手动跟踪音频的播放时间，而不是依赖于 isPlaying 属性。可以通过记录音频开始播放的时间，然后在协程中检查经过的时间是否超过了音频的总持续时间。
 
@@ -938,6 +980,60 @@ IEnumerator WaitForAudio(AudioSource audioSource, Action onFinished)
     onFinished?.Invoke();
 }
 ```
+
+
+### 在Unity里批量调整一个文件夹里的文件压缩格式
+ 
+在Unity项目的Assets/Editor文件夹中创建一个新的C#脚本，命名为BatchAudioCompressionEditor.cs。
+
+代码如下：
+
+```csharp
+
+using UnityEngine;
+using UnityEditor;
+
+public class BatchAudioCompressionEditor : EditorWindow
+{
+    [MenuItem("Tools/Batch Set Audio to Streaming")]
+    public static void ShowWindow()
+    {
+        GetWindow<BatchAudioCompressionEditor>("Batch Set Audio to Streaming");
+    }
+
+    void OnGUI()
+    {
+        if (GUILayout.Button("Set Audio in Resources to Streaming"))
+        {
+            SetAudioToStreaming("Assets/Resources");
+        }
+    }
+
+    private void SetAudioToStreaming(string folderPath)
+    {
+        string[] guids = AssetDatabase.FindAssets("t:AudioClip", new[] { folderPath });
+
+        foreach (string guid in guids)
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            AudioImporter audioImporter = AssetImporter.GetAtPath(path) as AudioImporter;
+
+            if (audioImporter != null)
+            {
+                audioImporter.loadInBackground = true;
+                audioImporter.preloadAudioData = false;
+                audioImporter.loadType = AudioClipLoadType.Streaming;
+
+                AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
+                Debug.Log($"Set {path} to Streaming");
+            }
+        }
+    }
+}
+
+```
+
+在Unity菜单栏中，点击 Tools -> Batch Set Audio to Streaming，然后点击窗口中的按钮“Set Audio in Resources to Streaming”。脚本将会遍历Resources文件夹中的所有音频文件，并将它们的加载类型设置为Streaming。
 
 ---
 
@@ -1041,6 +1137,14 @@ Vector3.Distance(A.position,B.position);
 
 ```csharp
  (A.position - B.position).sqrMagnitude;
+```
+
+### 噪声算法
+
+```chsarp
+float xCoord = (float)x / width * scale;
+float yCoord = (float)y / height * scale;
+float sample = Mathf.PerlinNoise(xCoord, yCoord);
 ```
 
 ---
