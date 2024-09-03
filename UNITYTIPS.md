@@ -1020,9 +1020,17 @@ public class BatchAudioCompressionEditor : EditorWindow
 
             if (audioImporter != null)
             {
-                audioImporter.loadInBackground = true;
-                audioImporter.preloadAudioData = false;
-                audioImporter.loadType = AudioClipLoadType.Streaming;
+                // 获取当前的导入设置
+                AudioImporterSampleSettings settings = audioImporter.defaultSampleSettings;
+
+                // 设置音频加载类型为Streaming
+                settings.loadType = AudioClipLoadType.Streaming;
+                
+                // 设置加载时不预加载数据
+                settings.preloadAudioData = false;
+
+                // 更新AudioImporter的默认SampleSettings
+                audioImporter.defaultSampleSettings = settings;
 
                 AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
                 Debug.Log($"Set {path} to Streaming");
@@ -1030,6 +1038,7 @@ public class BatchAudioCompressionEditor : EditorWindow
         }
     }
 }
+
 
 ```
 
