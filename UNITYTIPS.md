@@ -982,7 +982,7 @@ IEnumerator WaitForAudio(AudioSource audioSource, Action onFinished)
 ```
 
 
-### 在Unity里批量调整一个文件夹里的文件压缩格式
+### 在Unity里批量调整一个文件夹里的音频压缩格式
  
 在Unity项目的Assets/Editor文件夹中创建一个新的C#脚本，命名为BatchAudioCompressionEditor.cs。
 
